@@ -29,10 +29,6 @@ public class Book {
         this.author = newAuthor;
         this.yearPublished = newYearPublish;
         this.isRented = false;
-        /*
-         * System.out.println( this.title + " " + this.author + " " +
-         * this.yearPublished);
-         */
     }
 
     /**
@@ -41,12 +37,13 @@ public class Book {
     public boolean isRented() {
         return isRented;
     }
-
     /**
-    *
-    */
-    public void rent() {
-        this.isRented = true;
+     *
+     * @param setRentStatus
+     */
+    // Can use setter instead
+    public void setRented(final boolean setRentStatus) {
+        this.isRented = setRentStatus;
     }
     /**
     * @return this.title

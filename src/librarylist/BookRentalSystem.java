@@ -2,8 +2,9 @@ package librarylist;
 
 import java.util.ArrayList;
 
-public final class BookRental {
-    private BookRental() {
+//Name in documentation is BookRentalSystem
+public final class BookRentalSystem {
+    private BookRentalSystem() {
         super();
     }
 
@@ -24,7 +25,7 @@ public final class BookRental {
     }
 
     static void rentBooks(final Book book) {
-        book.rent();
+        book.setRented(true);
     }
 
     /**
@@ -40,6 +41,7 @@ public final class BookRental {
     public static int getLibrarySize() {
         return library.size();
     }
+
     /**
      *
      */
@@ -49,6 +51,7 @@ public final class BookRental {
                     + book.getYearPublished() + "\n");
         }
     }
+
     /**
      *
      */
@@ -80,7 +83,9 @@ public final class BookRental {
                 steel));
         displayBooks();
         rentBooks(library.get(0));
-        rentBooks(library.get(1));
+        // Output is different from documentation To Kill a Mockingbird Harper
+        // Lee 1960
+        rentBooks(library.get(2));
         displayRentedBooks();
     }
 
