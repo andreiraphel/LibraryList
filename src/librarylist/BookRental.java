@@ -53,7 +53,7 @@ public final class BookRental {
      *
      */
     public static void displayRentedBooks() {
-        System.out.print("Books Rented: \n");
+        System.out.print("\nBooks Rented: \n");
         for (Book book : getLibrary()) {
             if (book.isRented()) {
                 System.out.print(book.getTitle() + " " + book.getAuthor() + " "
@@ -78,9 +78,9 @@ public final class BookRental {
                 tipping));
         addBooks(new NonFictionBook("Guns, Germs, and Steel", "Jared Diamond",
                 steel));
+        displayBooks();
         rentBooks(library.get(0));
         rentBooks(library.get(1));
-        displayBooks();
         displayRentedBooks();
     }
 

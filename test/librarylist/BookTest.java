@@ -79,13 +79,13 @@ class BookTest {
         library.get(0).rent();
         BookRental.displayRentedBooks();
         
-        String expectedOutput = "Books Rented: \nThe Lord of the Rings J.R.R. Tolkien 1954" + "\n";
+        String expectedOutput = "\nBooks Rented: \nThe Lord of the Rings J.R.R. Tolkien 1954" + "\n";
         String actualOutput = outContent.toString();
 
         assertEquals(expectedOutput, actualOutput);
     }
     @Test
-    void testMain_WhenMainArgumentIsNull_ReturnTrue() {
+    void testMain_WhenMainArgumentIsNull_VoidReturnsNothing() {
         BookRental.main(null);
     }
 }
