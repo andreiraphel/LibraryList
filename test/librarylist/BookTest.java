@@ -66,7 +66,7 @@ class BookTest {
         BookRental.addBooks(new NonFictionBook("The Tipping Point", "M. Gladwell", 2000));
         BookRental.displayBooks();
         
-        String expectedOutput = "The Lord of the Rings J.R.R. Tolkien 1954" + "The Tipping Point M. Gladwell 2000";
+        String expectedOutput = "The Lord of the Rings J.R.R. Tolkien 1954" + "\n" + "The Tipping Point M. Gladwell 2000";
         String actualOutput = outContent.toString().trim();
 
         assertEquals(expectedOutput, actualOutput);
@@ -79,8 +79,8 @@ class BookTest {
         library.get(0).rent();
         BookRental.displayRentedBooks();
         
-        String expectedOutput = "The Lord of the Rings J.R.R. Tolkien 1954";
-        String actualOutput = outContent.toString().trim();
+        String expectedOutput = "Books Rented: \nThe Lord of the Rings J.R.R. Tolkien 1954" + "\n";
+        String actualOutput = outContent.toString();
 
         assertEquals(expectedOutput, actualOutput);
     }

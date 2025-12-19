@@ -30,9 +30,9 @@ public class Book {
         this.yearPublished = newYearPublish;
         this.isRented = false;
         /*
-        System.out.println(
-                this.title + " " + this.author + " " + this.yearPublished);
-        */
+         * System.out.println( this.title + " " + this.author + " " +
+         * this.yearPublished);
+         */
     }
 
     /**

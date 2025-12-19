@@ -46,17 +46,18 @@ public final class BookRental {
     public static void displayBooks() {
         for (Book book : getLibrary()) {
             System.out.print(book.getTitle() + " " + book.getAuthor() + " "
-                    + book.getYearPublished());
+                    + book.getYearPublished() + "\n");
         }
     }
     /**
      *
      */
     public static void displayRentedBooks() {
+        System.out.print("Books Rented: \n");
         for (Book book : getLibrary()) {
             if (book.isRented()) {
-                System.out.println(book.getTitle() + " " + book.getAuthor() + " "
-                        + book.getYearPublished());
+                System.out.print(book.getTitle() + " " + book.getAuthor() + " "
+                        + book.getYearPublished() + "\n");
             }
         }
     }
@@ -79,6 +80,8 @@ public final class BookRental {
                 steel));
         rentBooks(library.get(0));
         rentBooks(library.get(1));
+        displayBooks();
+        displayRentedBooks();
     }
 
 }
