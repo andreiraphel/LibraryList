@@ -9,7 +9,7 @@ public final class BookRentalSystem {
     }
 
     /**
-    *
+    * creates a new array list called "libary".
     */
     private static ArrayList<Book> library = new ArrayList<Book>();
 
@@ -29,7 +29,7 @@ public final class BookRentalSystem {
     }
 
     /**
-    *
+    * clears the libray array list.
     */
     public static void clearLibrary() {
         library.clear();
@@ -43,7 +43,8 @@ public final class BookRentalSystem {
     }
 
     /**
-     *
+     * displayBooks() function displays all the books in
+     * the library.
      */
     public static void displayBooks() {
         for (Book book : getLibrary()) {
@@ -53,7 +54,8 @@ public final class BookRentalSystem {
     }
 
     /**
-     *
+     * displayRentedBooks() function displays all the rented
+     * books in the library.
      */
     public static void displayRentedBooks() {
         System.out.print("\nBooks Rented: \n");
